@@ -19,3 +19,7 @@ Failed to compile.
 /Users/rene/work/epl/react-overmind/src/App.tsx
 TypeScript error in /Users/rene/work/epl/react-overmind/src/App.tsx(10,13):
 Property 'modals' does not exist on type '{}'. TS2339
+
+## overmind dev tools
+
+using the overmind dev tools (localhost:3031) all looks fine. The modals are added to the state and actions.
