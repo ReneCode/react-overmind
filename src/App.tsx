@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { useOvermind } from "./overmind";
 
 const App: React.FC = () => {
+  const { state, actions } = useOvermind();
+
+  const onOpenModal = () => {
+    // TODO  why is typescript complaining ?
+    actions.modals.editPageModal.open();
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>React using overmind</div>
+      <div>normal state works: {state.project.name}</div>
+      <button onClick={onOpenModal}>open modal</button>
     </div>
   );
-}
+};
 
 export default App;
